@@ -1,5 +1,6 @@
 ﻿namespace _06_HomeWork
 {
+    //-------------------- 1 Task
     class Program
     {
         static void Main(string[] args)
@@ -33,7 +34,7 @@
             }
             return a / b;
         }
-
+        //--------------------- 2 TAsk
         static int ReadInt(string message)
         {
             while (true)
@@ -48,7 +49,8 @@
             }
         }
 
-        static void Maain(string[] args)
+        //--------------- 3 Task
+        static void Main(string[] args)
         {
             try
             {
