@@ -63,8 +63,6 @@
 
             developers.Add(new Programmer { Language = "C#", Tool = "Visual Studio" });
             developers.Add(new Programmer { Language = "Java", Tool = "Eclipse" });
-            developers.Add(new Builder { Building = "House", Tool = "Hammer" });
-            developers.Add(new Builder { Building = "Bridge", Tool = "Crane" });
 
             foreach (var developer in developers)
             {
@@ -84,6 +82,7 @@
     }
 
 }
+
 namespace App
 {
     //---------- 2.1 Task
