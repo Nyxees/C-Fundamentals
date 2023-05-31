@@ -88,12 +88,12 @@
                 Console.WriteLine();
             }
             //--------------- 2 Task
-            var shapesInRange = shapes.Where(shape => shape.Area() >= 10 && shape.Area() <= 100);
+            var Range = shapes.Where(shape => shape.Area() >= 10 && shape.Area() <= 100);
 
-            using (StreamWriter writer = new StreamWriter("ShapesInRange.txt"))
+            using (StreamWriter writer = new StreamWriter("Range.txt"))
             {
                 writer.WriteLine("Shapes with area in the range [10, 100]:");
-                foreach (Shape shape in shapesInRange)
+                foreach (Shape shape in Range)
                 {
                     writer.WriteLine($"Name: {shape.Name}");
                     writer.WriteLine($"Area: {shape.Area()}");
@@ -102,15 +102,15 @@
                 }
             }
 
-            Console.WriteLine("Shapes with area in the range [10, 100] written to file 'ShapesInRange.txt'.");
+            Console.WriteLine("Shapes with area in the range [10, 100] written to file 'Range.txt'.");
 
             //-------------- 3 Task
-            var shapesWithNameContainingA = shapes.Where(shape => shape.Name.Contains('a'));
+            var ContainingA = shapes.Where(shape => shape.Name.Contains('a'));
 
-            using (StreamWriter writer = new StreamWriter("ShapesWithNameContainingA.txt"))
+            using (StreamWriter writer = new StreamWriter("ContainingA.txt"))
             {
                 writer.WriteLine("Shapes with name containing the letter 'a':");
-                foreach (Shape shape in shapesWithNameContainingA)
+                foreach (Shape shape in ContainingA)
                 {
                     writer.WriteLine($"Name: {shape.Name}");
                     writer.WriteLine($"Area: {shape.Area()}");
@@ -120,7 +120,7 @@
             }
 
             //-------------- 4 Task
-            Console.WriteLine("Shapes with name containing the letter 'a' written to file 'ShapesWithNameContainingA.txt'.");
+            Console.WriteLine("Shapes with name containing the letter 'a' written to file 'ContainingA.txt'.");
 
             shapes.RemoveAll(shape => shape.Perimeter() < 5);
 
@@ -142,7 +142,7 @@
         static void Main()
         {
             // Specify the path
-            string filePath = "path_to_your_text_file.txt";
+            string filePath = "path.txt";
 
             // Read all lines into an array of strings
             string[] lines = File.ReadAllLines(filePath);
